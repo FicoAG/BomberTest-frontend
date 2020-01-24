@@ -80,6 +80,7 @@
               v-if="item.category === f_categoria"
               class="text-truncate"
               style="max-width: 150px;"
+              @click="goToQuestion(item._id, item)"
             >
               <p>{{ item.enunciado }}</p>
             </td>
@@ -93,7 +94,11 @@
                 <span v-if="tema._id === item.tema_id">{{ tema.name }}</span>
               </p>
             </td>
-            <td v-if="item.category === f_categoria" class="text-truncate">
+            <td
+              v-if="item.category === f_categoria"
+              class="text-truncate"
+              @click="goToQuestion(item._id, item)"
+            >
               {{ item.category }}
             </td>
           </tr>

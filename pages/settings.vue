@@ -160,6 +160,12 @@ export default {
       } else {
         await this.$store.dispatch('updateSuscription', this.seleccion)
       }
+      this.name = ''
+      this.lastName = ''
+      this.nickName = ''
+      this.email = ''
+      this.phone = ''
+      this.seleccion = ''
     }
   }
 }
