@@ -16,7 +16,7 @@
           shaped
           min-height="200"
           :color="colores[idx]"
-          :class="prueba[idx]"
+          :class="solucion[idx]"
           @click="selectAnswer(answer, idx)"
         >
           <h3>{{ answer }}</h3>
@@ -54,7 +54,7 @@ export default {
     return {
       colores: ['grey', 'grey', 'grey', 'grey'],
       answered: false,
-      prueba: ['none', 'none', 'none', 'none']
+      solucion: ['none', 'none', 'none', 'none']
     }
   },
 
@@ -62,7 +62,7 @@ export default {
     selectAnswer(answer, idx) {
       if (!this.answered) {
         this.colores.splice(idx, 1, answer === this.correct ? 'green' : 'red')
-        this.prueba.splice(
+        this.solucion.splice(
           idx,
           1,
           answer === this.correct ? 'correct' : 'error'

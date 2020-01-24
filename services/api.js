@@ -7,8 +7,8 @@ export default {
   getAllTemas() {
     return axios.get('temario').then(response => response.data)
   },
-  getUserById(prueba) {
-    return axios.get('users/' + prueba).then(response => response.data)
+  getUserById(user_id) {
+    return axios.get('users/' + user_id).then(response => response.data)
   },
   getQuestionById(pregunta_id) {
     return axios.get('questions/' + pregunta_id).then(response => response.data)
