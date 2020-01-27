@@ -11,7 +11,7 @@
               <v-row class="fill-height" align="center" justify="center">
                 <Question
                   :enunciado="question.enunciado"
-                  :answers="question.answer_wrong"
+                  :answers="question.answers_wrong"
                   :correct="question.answers_correct"
                   :numero="i"
                   @selectAnswer="selectAnswer"
