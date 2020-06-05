@@ -361,5 +361,8 @@ export default {
     return axios
       .post('users/new_pass', data, { headers: { token } })
       .then(response => response.data)
+  },
+  select_question(data) {
+    console.log(data)
   }
 }
